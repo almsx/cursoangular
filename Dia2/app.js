@@ -61,9 +61,37 @@ function PeliculaArrow() {
     }, 4500);
 }
 PeliculaArrow();
-/* Imprimir resutadp */
+var pelicula = {
+    titulo: 'Chucky',
+    duracion: 120,
+    ganadoraOscar: function (gana) {
+        return console.log(gana ? 'SI gano' : 'NO gano');
+    }
+};
+var verPelicula = function (gana) {
+    console.log(gana ? 'SI gano' : 'NO gano');
+};
+var director = {
+    nombre: 'Alberto',
+    apellido: 'Tadeo',
+    numPeliculaDirigidas: 20
+};
+console.log('pelicula');
+console.log(pelicula);
+console.log('pelicula');
+console.log(director);
+console.log('Director ', director);
+pelicula.ganadoraOscar(true);
+var generar = {
+    name: 'Albe',
+    paterno: 'Luebbert',
+    materno: 'Mendoza',
+    rfc: function (name, paterno, materno) {
+        return ;
+    }
+};
+var verPelicula = function (gana) {
+    console.log(gana ? 'SI gano' : 'NO gano');
+};
 document.querySelector('#app').innerHTML = peliSeleccionada;
 document.querySelector('#app2').innerHTML = ps;
-//document.querySelector('#app3').innerHTML = Pelicula();
-//document.querySelector('#app4').innerHTML = Pelicula3();
-//document.querySelector('#app5').innerHTML = PeliculaArrow();

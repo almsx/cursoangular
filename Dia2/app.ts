@@ -79,10 +79,69 @@ function PeliculaArrow() {
 PeliculaArrow();
 /* Imprimir resutadp */
 
+interface Pelicula{
+    titulo: string,
+    duracion?: number,
+    ganadoraOscar?: (gana: boolean) => void
+}
+
+let pelicula: Pelicula = {
+    titulo: 'Chucky',
+    duracion: 120,
+    ganadoraOscar: (gana: boolean) =>
+    console.log(gana ? 'SI gano': 'NO gano' )
+}
+
+let verPelicula = (gana:boolean): void => {
+    console.log(gana ? 'SI gano': 'NO gano' )
+}
+
+interface Persona {
+    nombre: string,
+    apellido: string
+}
+
+interface DirectorCine extends Persona {
+    numPeliculaDirigidas: number
+}
+
+let director: DirectorCine= {
+    nombre: 'Alberto',
+    apellido: 'Tadeo',
+    numPeliculaDirigidas: 20
+}
+
+console.log('pelicula');
+console.log(pelicula);
+console.log('pelicula');
+console.log(director);
+console.log('Director ', director);
+
+
+
+pelicula.ganadoraOscar(true);
+
+interface People{
+    name: string,
+    paterno: string,
+    materno: string,
+    rfc: (name: string, paterno: string, materno: string) => string
+}
+
+let generar: People = {
+    name: 'Albe',
+    paterno: 'Luebbert',
+    materno: 'Mendoza',
+    rfc: (name: 'a', paterno: 's', materno: 's')
+}
+
+let verPelicula = (gana:boolean): void => {
+    console.log(gana ? 'SI gano': 'NO gano' )
+}
+
+
+
 document.querySelector('#app').innerHTML = peliSeleccionada;
 document.querySelector('#app2').innerHTML = ps;
-//document.querySelector('#app3').innerHTML = Pelicula();
-//document.querySelector('#app4').innerHTML = Pelicula3();
-//document.querySelector('#app5').innerHTML = PeliculaArrow();
 
 
