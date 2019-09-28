@@ -1,9 +1,12 @@
 var peliculas = [
-    { genero: 'Comedia', titulo: 'Scary Movie'
+    {
+        genero: 'Comedia', titulo: 'Scary Movie'
     },
-    { genero: 'Terror', titulo: 'Chucku'
+    {
+        genero: 'Terror', titulo: 'Chucku'
     },
-    { genero: 'Suspenso', titulo: 'Duro de matar'
+    {
+        genero: 'Suspenso', titulo: 'Duro de matar'
     },
 ];
 /* JS */
@@ -29,6 +32,38 @@ peliculas.forEach(function (pelicula, index) {
     var texto = pelicula.titulo + ' (' + pelicula.genero + ')' + ' vista! ' + index;
     console.log(texto);
 });
+/* IV Function Arrw */
+function Pelicula() {
+    var self = this;
+    self.anoEstreno = 2000;
+    setTimeout(function () {
+        console.log(self.anoEstreno);
+    }, 1500);
+}
+Pelicula();
+function Pelicula3() {
+    //let self = this;
+    //self.anoEstreno = 2000;
+    var estreno = 5000;
+    function mensaje(estreno) {
+        console.log(estreno);
+    }
+    setTimeout(function () {
+        mensaje(estreno);
+    }, 3500);
+}
+Pelicula3();
+function PeliculaArrow() {
+    var _this = this;
+    this.añoEstreno = 2000;
+    setTimeout(function () {
+        console.log(_this.añoEstreno);
+    }, 4500);
+}
+PeliculaArrow();
 /* Imprimir resutadp */
 document.querySelector('#app').innerHTML = peliSeleccionada;
 document.querySelector('#app2').innerHTML = ps;
+//document.querySelector('#app3').innerHTML = Pelicula();
+//document.querySelector('#app4').innerHTML = Pelicula3();
+//document.querySelector('#app5').innerHTML = PeliculaArrow();
